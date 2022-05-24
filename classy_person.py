@@ -18,7 +18,7 @@ class Person:
         print(self.age)
 
     def say_greeting(self):
-        print("Hello world! My name is",self.name,"!")
+        print(f"Hello world! My name is {self.name}!")
     
     def __iter__(self):
         self.start = 1
@@ -30,7 +30,7 @@ class Person:
             print(x)
       
 
-kristina = Person(34, "Kristina")
+kristina = Person(34,"Kristina")
 print(kristina.age)
 kristina.increase_age()
 kristina.say_greeting()
