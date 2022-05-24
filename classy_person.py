@@ -9,32 +9,31 @@ don't forget the use of 'self' and to have the methods:
 
 class Person:
     
-    def __init__(self,name, age) -> None:
-        self.name = name
-        self.age = age
+    def __init__(self) -> None:
+        self.name = input("Enter name:")
+        self.age = input("Enter age:")
         
 
+    def display(self):
+        print(self.name, self.age)
+
+        
     def increase_age(self): 
-        self.age = self.age + 1
-        print(self.age)
+        self.age = int(self.age) + 1  
+        print(self.age)    
 
     def say_greeting(self):
         print("Hello world! My name is",self.name,"!")
     
-    def __iter__(self):
-        self.start = 1
-        return self
- 
+
     def count_to_age(self):
         for x in range(1,self.age):
             print(x)
-        
-
-kristina = Person("Kristina",34)
-print(kristina.age)
-kristina.increase_age()
-kristina.say_greeting()
-kristina.count_to_age()
+      
+person = Person()
+person.increase_age()
+person.say_greeting()
+person.count_to_age()
 
 
 
